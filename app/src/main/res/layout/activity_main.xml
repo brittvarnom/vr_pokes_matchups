@@ -4,6 +4,7 @@
               android:id="@+id/activity_main"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/colorAppBackground"
               android:orientation="vertical"
               android:weightSum="2.2"
               tools:context=".MainActivity">
@@ -11,7 +12,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@android:color/white"/>
+        android:background="@color/colorPrimary"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="@android:color/white"/>
+            android:background="@color/colorAccent"/>
 
         <Spinner
             android:id="@+id/type_2"
@@ -41,9 +42,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/bg_blank"
-            tools:background="@drawable/bg_cyber"
             android:entries="@array/type_2"
             android:textAlignment="center"
+            tools:background="@drawable/bg_cyber"
             tools:entries="@array/tools2"/>
     </LinearLayout>
 
@@ -70,14 +71,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
+                    android:textStyle="bold"
                     android:text="@string/super_effective"
                     android:textAlignment="center"
-                    android:textColor="@color/lighterText"/>
+                    android:textColor="@color/colorLighterText"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@android:color/white"/>
+                    android:background="@color/colorAccent"/>
 
                 <ImageView
                     android:id="@+id/s_eff_1"
@@ -175,8 +177,8 @@
                     android:id="@+id/s_eff_19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:src="@drawable/water"
-                    tools:background="@drawable/quadweak"/>
+                    tools:background="@drawable/quadweak"
+                    tools:src="@drawable/water"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -187,14 +189,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:text="@string/regular_effectiveness"
+                    android:textStyle="bold"
+                    android:text="@string/regular_effect"
                     android:textAlignment="center"
-                    android:textColor="@color/lighterText"/>
+                    android:textColor="@color/colorLighterText"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@android:color/white"/>
+                    android:background="@color/colorAccent"/>
 
                 <ImageView
                     android:id="@+id/r_eff_1"
@@ -301,9 +304,9 @@
             </LinearLayout>
 
             <View
-                android:layout_width="2dp"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"/>
+                android:layout_width="2dp"
+                android:background="@color/colorAccent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -316,14 +319,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
+                    android:textStyle="bold"
                     android:text="@string/not_very_effective"
                     android:textAlignment="center"
-                    android:textColor="@color/lighterText"/>
+                    android:textColor="@color/colorLighterText"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@android:color/white"/>
+                    android:background="@color/colorAccent"/>
 
                 <ImageView
                     android:id="@+id/n_eff_1"
@@ -421,8 +425,8 @@
                     android:id="@+id/n_eff_18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:src="@drawable/steel"
-                    tools:background="@drawable/quadresist"/>
+                    tools:background="@drawable/quadresist"
+                    tools:src="@drawable/steel"/>
 
                 <ImageView
                     android:id="@+id/n_eff_19"
@@ -438,14 +442,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
+                    android:textStyle="bold"
                     android:text="@string/no_effect"
                     android:textAlignment="center"
-                    android:textColor="@color/lighterText"/>
+                    android:textColor="@color/colorLighterText"/>
 
                 <View
-                    android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@android:color/white"/>
+                    android:layout_width="match_parent"
+                    android:background="@color/colorAccent"/>
 
                 <ImageView
                     android:id="@+id/z_eff_1"

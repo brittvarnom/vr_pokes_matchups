@@ -55,10 +55,10 @@
     <string name="weaknesses">Weaknesses:</string>
     <string name="resistances">Resistances:</string>
     <string name="immunities">Immunities:</string>
-    <string name="super_effective">Super effective:</string>
-    <string name="regular_effectiveness">Regular effectiveness</string>
-    <string name="not_very_effective">Not very effective:</string>
-    <string name="no_effect">No effect:</string>
+    <string name="super_effective">SUPER EFFECTIVE:</string>
+    <string name="regular_effect">REGULAR EFFECT</string>
+    <string name="not_very_effective">NOT VERY EFFECTIVE:</string>
+    <string name="no_effect">NO EFFECT:</string>
     <string name="check_type">Check type/s</string>
     <string name="regular_damage">Regular damage:</string>
 </resources>
