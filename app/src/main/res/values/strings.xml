@@ -1,0 +1,64 @@
+<resources>
+    <string-array name="type_1">
+        <item>Type 1</item>
+        <item>BUG</item>
+        <item>CYBER</item>
+        <item>DARK</item>
+        <item>DRAGON</item>
+        <item>ELECTRIC</item>
+        <item>FAIRY</item>
+        <item>FIGHTING</item>
+        <item>FIRE</item>
+        <item>FLYING</item>
+        <item>GHOST</item>
+        <item>GRASS</item>
+        <item>GROUND</item>
+        <item>ICE</item>
+        <item>NORMAL</item>
+        <item>POISON</item>
+        <item>PSYCHIC</item>
+        <item>ROCK</item>
+        <item>STEEL</item>
+        <item>WATER</item>
+    </string-array>
+    <string-array name="type_2">
+        <item>Type 2</item>
+        <item>BUG</item>
+        <item>CYBER</item>
+        <item>DARK</item>
+        <item>DRAGON</item>
+        <item>ELECTRIC</item>
+        <item>FAIRY</item>
+        <item>FIGHTING</item>
+        <item>FIRE</item>
+        <item>FLYING</item>
+        <item>GHOST</item>
+        <item>GRASS</item>
+        <item>GROUND</item>
+        <item>ICE</item>
+        <item>NORMAL</item>
+        <item>POISON</item>
+        <item>PSYCHIC</item>
+        <item>ROCK</item>
+        <item>STEEL</item>
+        <item>WATER</item>
+    </string-array>
+
+    <string-array name="tools1">
+        <item>FIRE</item>
+    </string-array>
+    <string-array name="tools2">
+        <item>CYBER</item>
+    </string-array>
+
+    <string name="app_name">VRPokesMatchups</string>
+    <string name="weaknesses">Weaknesses:</string>
+    <string name="resistances">Resistances:</string>
+    <string name="immunities">Immunities:</string>
+    <string name="super_effective">Super effective:</string>
+    <string name="regular_effectiveness">Regular effectiveness</string>
+    <string name="not_very_effective">Not very effective:</string>
+    <string name="no_effect">No effect:</string>
+    <string name="check_type">Check type/s</string>
+    <string name="regular_damage">Regular damage:</string>
+</resources>
