@@ -4,18 +4,23 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
 import britt.com.vrpokesmatchups.TypeRecycler.StrengthCalculations
 import britt.com.vrpokesmatchups.TypeRecycler.TypeImage
 import britt.com.vrpokesmatchups.TypeRecycler.TypesAdapter
+import britt.com.vrpokesmatchups.UsagesRecycler.MakePokemon
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
 
 var superEffectiveTypes = ArrayList<TypeImage>()
 var regularEffectTypes = ArrayList<TypeImage>()
 var littleEffectTypes = ArrayList<TypeImage>()
 var noEffectTypes = ArrayList<TypeImage>()
+
+val test = MakePokemon()
 
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -37,6 +42,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_main)
         type_1.onItemSelectedListener = this
         type_2.onItemSelectedListener = this
+
+        test.printResult(applicationContext)
     }
 
     fun updateTypesOnSpinnerChange() {
