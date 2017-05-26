@@ -61,4 +61,5 @@
     <string name="no_effect">NO EFFECT:</string>
     <string name="check_type">Check type/s</string>
     <string name="regular_damage">Regular damage:</string>
+    <string name="check_type_usage">Check Type Usage</string>
 </resources>

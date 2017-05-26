@@ -1,4 +1,6 @@
-package britt.com.vrpokesmatchups
+package britt.com.vrpokesmatchups.TypeRecycler
+
+import britt.com.vrpokesmatchups.Types
 
 
 class StrengthCalculations {

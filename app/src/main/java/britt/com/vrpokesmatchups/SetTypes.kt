@@ -1,6 +1,7 @@
 package britt.com.vrpokesmatchups
 
 import android.widget.Spinner
+import britt.com.vrpokesmatchups.Types
 
 class SetTypes {
     fun setTypesFromSpinner(type_n : Spinner): Types {
