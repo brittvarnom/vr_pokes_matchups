@@ -3,16 +3,21 @@ package britt.com.vrpokesmatchups
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ImageView
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.activity_main.*
 
+var superEffectiveTypes = ArrayList<TypeImage>()
+var regularEffectTypes = ArrayList<TypeImage>()
+var littleEffectTypes = ArrayList<TypeImage>()
+var noEffectTypes = ArrayList<TypeImage>()
+
+
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(parent: AdapterView<*>?) {
-
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -35,84 +40,69 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     fun updateTypesOnSpinnerChange() {
         type1 = setTypes.setTypesFromSpinner(type_1)
         type2 = setTypes.setTypesFromSpinner(type_2)
-        val typeWeaknesses : MutableMap<Types, Double> = strengthCalculations.getResults(type1, type2)
+        val typeWeaknesses: MutableMap<Types, Double> = strengthCalculations.getResults(type1, type2)
         displayTypes(typeWeaknesses)
-        setBackgroundOnSpinners()
-    }
-
-    fun displayTypes(typeWeaknesses : MutableMap<Types, Double>) {
-        moveImagePerType(typeWeaknesses, Types.BUG, s_eff_1, r_eff_1, n_eff_1, z_eff_1, R.drawable.bug)
-        moveImagePerType(typeWeaknesses, Types.CYBER, s_eff_2, r_eff_2, n_eff_2, z_eff_2, R.drawable.cyber)
-        moveImagePerType(typeWeaknesses, Types.DARK, s_eff_3, r_eff_3, n_eff_3, z_eff_3, R.drawable.dark)
-        moveImagePerType(typeWeaknesses, Types.DRAGON, s_eff_4, r_eff_4, n_eff_4, z_eff_4, R.drawable.dragon)
-        moveImagePerType(typeWeaknesses, Types.ELECTRIC, s_eff_5, r_eff_5, n_eff_5, z_eff_5, R.drawable.electric)
-        moveImagePerType(typeWeaknesses, Types.FAIRY, s_eff_6, r_eff_6, n_eff_6, z_eff_6, R.drawable.fairy)
-        moveImagePerType(typeWeaknesses, Types.FIGHTING, s_eff_7, r_eff_7, n_eff_7, z_eff_7, R.drawable.fighting)
-        moveImagePerType(typeWeaknesses, Types.FIRE, s_eff_8, r_eff_8, n_eff_8, z_eff_8, R.drawable.fire)
-        moveImagePerType(typeWeaknesses, Types.FLYING, s_eff_9, r_eff_9, n_eff_9, z_eff_9, R.drawable.flying)
-        moveImagePerType(typeWeaknesses, Types.GHOST, s_eff_10, r_eff_10, n_eff_10, z_eff_10, R.drawable.ghost)
-        moveImagePerType(typeWeaknesses, Types.GRASS, s_eff_11, r_eff_11, n_eff_11, z_eff_11, R.drawable.grass)
-        moveImagePerType(typeWeaknesses, Types.GROUND, s_eff_12, r_eff_12, n_eff_12, z_eff_12, R.drawable.ground)
-        moveImagePerType(typeWeaknesses, Types.ICE, s_eff_13, r_eff_13, n_eff_13, z_eff_13, R.drawable.ice)
-        moveImagePerType(typeWeaknesses, Types.NORMAL, s_eff_14, r_eff_14, n_eff_14, z_eff_14, R.drawable.normal)
-        moveImagePerType(typeWeaknesses, Types.POISON, s_eff_15, r_eff_15, n_eff_15, z_eff_15, R.drawable.poison)
-        moveImagePerType(typeWeaknesses, Types.PSYCHIC, s_eff_16, r_eff_16, n_eff_16, z_eff_16, R.drawable.psychic)
-        moveImagePerType(typeWeaknesses, Types.ROCK, s_eff_17, r_eff_17, n_eff_17, z_eff_17, R.drawable.rock)
-        moveImagePerType(typeWeaknesses, Types.STEEL, s_eff_18, r_eff_18, n_eff_18, z_eff_18, R.drawable.steel)
-        moveImagePerType(typeWeaknesses, Types.WATER, s_eff_19, r_eff_19, n_eff_19, z_eff_19, R.drawable.water)
-    }
-
-    fun moveImagePerType(typeWeaknesses : MutableMap<Types, Double>, type : Types, s_eff_n : ImageView,
-                         r_eff_n : ImageView, n_eff_n : ImageView, z_eff_n : ImageView, resId: Int) {
-        if (typeWeaknesses[type]!! >= 2) {
-            s_eff_n.setImageResource(resId)
-            if (typeWeaknesses[type]!! == 4.0) {
-                s_eff_n.setBackgroundResource(R.drawable.quadweak)
-            } else {
-                s_eff_n.setBackgroundResource(0)
-            }
-            r_eff_n.setImageResource(0)
-            n_eff_n.setImageResource(0)
-            n_eff_n.setBackgroundResource(0)
-            z_eff_n.setImageResource(0)
-        } else if (typeWeaknesses[type]!! == 1.0) {
-            r_eff_n.setImageResource(resId)
-            s_eff_n.setImageResource(0)
-            s_eff_n.setBackgroundResource(0)
-            n_eff_n.setImageResource(0)
-            n_eff_n.setBackgroundResource(0)
-            z_eff_n.setImageResource(0)
-        } else if ((typeWeaknesses[type]!! == 0.0)){
-            r_eff_n.setImageResource(0)
-            s_eff_n.setImageResource(0)
-            s_eff_n.setBackgroundResource(0)
-            n_eff_n.setImageResource(0)
-            n_eff_n.setBackgroundResource(0)
-            z_eff_n.setImageResource(resId)
-        } else if ((typeWeaknesses[type]!! <= 1)){
-            r_eff_n.setImageResource(0)
-            s_eff_n.setImageResource(0)
-            s_eff_n.setBackgroundResource(0)
-            n_eff_n.setImageResource(resId)
-            if (typeWeaknesses[type]!! == 0.25) {
-                n_eff_n.setBackgroundResource(R.drawable.quadresist)
-            } else {
-                n_eff_n.setBackgroundResource(0)
-            }
-            z_eff_n.setImageResource(0)
-        } else {
-            r_eff_n.setImageResource(0)
-            s_eff_n.setImageResource(0)
-            s_eff_n.setBackgroundResource(0)
-            n_eff_n.setImageResource(0)
-            n_eff_n.setBackgroundResource(0)
-            z_eff_n.setImageResource(0)
-        }
-    }
-
-    fun setBackgroundOnSpinners() {
         setSpinnerBackground(type1, type_1)
         setSpinnerBackground(type2, type_2)
+    }
+
+    fun displayTypes(typeWeaknesses: MutableMap<Types, Double>) {
+        superEffectiveTypes.clear()
+        regularEffectTypes.clear()
+        noEffectTypes.clear()
+        littleEffectTypes.clear()
+
+        addToArrays(typeWeaknesses, Types.BUG, R.drawable.bug)
+        addToArrays(typeWeaknesses, Types.CYBER, R.drawable.cyber)
+        addToArrays(typeWeaknesses, Types.DARK, R.drawable.dark)
+        addToArrays(typeWeaknesses, Types.DRAGON, R.drawable.dragon)
+        addToArrays(typeWeaknesses, Types.ELECTRIC, R.drawable.electric)
+        addToArrays(typeWeaknesses, Types.FAIRY, R.drawable.fairy)
+        addToArrays(typeWeaknesses, Types.FIGHTING, R.drawable.fighting)
+        addToArrays(typeWeaknesses, Types.FIRE, R.drawable.fire)
+        addToArrays(typeWeaknesses, Types.FLYING, R.drawable.flying)
+        addToArrays(typeWeaknesses, Types.GHOST, R.drawable.ghost)
+        addToArrays(typeWeaknesses, Types.GRASS, R.drawable.grass)
+        addToArrays(typeWeaknesses, Types.GROUND, R.drawable.ground)
+        addToArrays(typeWeaknesses, Types.ICE, R.drawable.ice)
+        addToArrays(typeWeaknesses, Types.NORMAL, R.drawable.normal)
+        addToArrays(typeWeaknesses, Types.POISON, R.drawable.poison)
+        addToArrays(typeWeaknesses, Types.PSYCHIC, R.drawable.psychic)
+        addToArrays(typeWeaknesses, Types.ROCK, R.drawable.rock)
+        addToArrays(typeWeaknesses, Types.STEEL, R.drawable.steel)
+        addToArrays(typeWeaknesses, Types.WATER, R.drawable.water)
+
+        val sETypesAdapter = TypesAdapter(superEffectiveTypes)
+        val rEtypesAdapter = TypesAdapter(regularEffectTypes)
+        val nVEtypesAdapter = TypesAdapter(littleEffectTypes)
+        val nEtypesAdapter = TypesAdapter(noEffectTypes)
+
+
+        s_eff_recycler.adapter = sETypesAdapter
+        s_eff_recycler.layoutManager = LinearLayoutManager(applicationContext)
+        r_eff_recycler.adapter = rEtypesAdapter
+        r_eff_recycler.layoutManager = LinearLayoutManager(applicationContext)
+        n_eff_recycler.adapter = nVEtypesAdapter
+        n_eff_recycler.layoutManager = LinearLayoutManager(applicationContext)
+        z_eff_recycler.adapter = nEtypesAdapter
+        z_eff_recycler.layoutManager = LinearLayoutManager(applicationContext)
+
+    }
+
+    fun addToArrays(typeWeaknesses: MutableMap<Types, Double>, type: Types, resId: Int) {
+        if (typeWeaknesses[type]!! == 4.0) {
+            superEffectiveTypes.add(TypeImage(resId, R.drawable.quadweak))
+        } else if (typeWeaknesses[type]!! == 2.0) {
+            superEffectiveTypes.add(TypeImage(resId))
+        } else if (typeWeaknesses[type]!! == 1.0) {
+            regularEffectTypes.add(TypeImage(resId))
+        } else if ((typeWeaknesses[type]!! == 0.0)) {
+            noEffectTypes.add(TypeImage(resId))
+        } else if ((typeWeaknesses[type]!! == 0.5)) {
+            littleEffectTypes.add(TypeImage(resId))
+        } else {
+            littleEffectTypes.add(TypeImage(resId, R.drawable.quadresist))
+        }
     }
 
     fun setSpinnerBackground(type: Types, type_sp: Spinner) {

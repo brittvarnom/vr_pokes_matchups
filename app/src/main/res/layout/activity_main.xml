@@ -71,114 +71,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:textStyle="bold"
                     android:text="@string/super_effective"
                     android:textAlignment="center"
-                    android:textColor="@color/colorLighterText"/>
+                    android:textColor="@color/colorLighterText"
+                    android:textStyle="bold"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/colorAccent"/>
 
-                <ImageView
-                    android:id="@+id/s_eff_1"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/s_eff_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/s_eff_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/ground"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/rock"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/s_eff_19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:background="@drawable/quadweak"
-                    tools:src="@drawable/water"/>
+                </android.support.v7.widget.RecyclerView>
 
                 <View
                     android:layout_width="match_parent"
@@ -189,123 +97,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:textStyle="bold"
                     android:text="@string/regular_effect"
                     android:textAlignment="center"
-                    android:textColor="@color/colorLighterText"/>
+                    android:textColor="@color/colorLighterText"
+                    android:textStyle="bold"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/colorAccent"/>
 
-                <ImageView
-                    android:id="@+id/r_eff_1"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/r_eff_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/bug"/>
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/r_eff_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/dark"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/dragon"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/fighting"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/flying"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/ghost"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/psychic"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/r_eff_19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 
             <View
-                android:layout_height="match_parent"
                 android:layout_width="2dp"
+                android:layout_height="match_parent"
                 android:background="@color/colorAccent"/>
 
             <LinearLayout
@@ -319,119 +132,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:textStyle="bold"
                     android:text="@string/not_very_effective"
                     android:textAlignment="center"
-                    android:textColor="@color/colorLighterText"/>
+                    android:textColor="@color/colorLighterText"
+                    android:textStyle="bold"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:background="@color/colorAccent"/>
 
-                <ImageView
-                    android:id="@+id/n_eff_1"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/n_eff_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/n_eff_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/cyber"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/fairy"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/fire"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/grass"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/ice"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/normal"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/poison"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:background="@drawable/quadresist"
-                    tools:src="@drawable/steel"/>
-
-                <ImageView
-                    android:id="@+id/n_eff_19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                </android.support.v7.widget.RecyclerView>
 
                 <View
                     android:layout_width="match_parent"
@@ -442,111 +158,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimaryDark"
-                    android:textStyle="bold"
                     android:text="@string/no_effect"
                     android:textAlignment="center"
-                    android:textColor="@color/colorLighterText"/>
+                    android:textColor="@color/colorLighterText"
+                    android:textStyle="bold"/>
 
                 <View
-                    android:layout_height="2dp"
                     android:layout_width="match_parent"
+                    android:layout_height="2dp"
                     android:background="@color/colorAccent"/>
 
-                <ImageView
-                    android:id="@+id/z_eff_1"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/z_eff_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/z_eff_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:src="@drawable/electric"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/z_eff_19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 
