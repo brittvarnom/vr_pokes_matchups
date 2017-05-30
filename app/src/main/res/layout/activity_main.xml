@@ -49,6 +49,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/check_usages_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_blank"

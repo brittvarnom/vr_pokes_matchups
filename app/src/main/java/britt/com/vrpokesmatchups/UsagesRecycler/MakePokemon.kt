@@ -3,8 +3,6 @@ package britt.com.vrpokesmatchups.UsagesRecycler
 import android.content.Context
 import android.util.Log
 import britt.com.vrpokesmatchups.R
-import britt.com.vrpokesmatchups.Types
-import britt.com.vrpokesmatchups.test
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -22,7 +20,6 @@ class MakePokemon {
         val end = "--END--"
 
         while (currentLine != end) {
-            Log.d(">>>-", currentLine)
             currentLine += "\n"
             sb.append(currentLine)
             currentLine = br.readLine() ?: end
@@ -30,31 +27,13 @@ class MakePokemon {
         return sb.toString()
     }
 
-    fun printResult(context: Context) {
+    fun printResult(context: Context): String {
         try {
-            Log.d(">>>-", addPokes(context).toString())
+            Log.d(">>>-", GetTextFromFile(context))
         } catch (e: IOException) {
             Log.e(">>>-", "failed " + e.message)
         }
-    }
-
-    fun splitToArray(context: Context): List<String> {
-        return GetTextFromFile(context).split("\n")
-    }
-
-    fun addPokes(context: Context): ArrayList<Pokes> {
-        val allPokesList = splitToArray(context)
-        var currentPokeNo = 0
-        val pokemon = ArrayList<Pokes>()
-
-        for (i in allPokesList.iterator()) {
-            val eachPoke = allPokesList[currentPokeNo].split(',')
-            pokemon.add(Pokes("https://github.com/yumanaa/game-thingy/blob/develop/Graphics/Battlers/${eachPoke[0]}.png?raw=true",
-                eachPoke[1], eachPoke[2], eachPoke[3]))
-        }
-
-
-        return pokemon
+        return GetTextFromFile(context)
     }
 }
 

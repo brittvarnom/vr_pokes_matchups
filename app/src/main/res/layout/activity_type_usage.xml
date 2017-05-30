@@ -7,6 +7,7 @@
     tools:context="britt.com.vrpokesmatchups.TypeUsageActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/pokelist_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

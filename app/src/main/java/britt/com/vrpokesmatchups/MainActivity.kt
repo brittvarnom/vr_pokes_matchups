@@ -1,10 +1,10 @@
 package britt.com.vrpokesmatchups
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
@@ -13,7 +13,6 @@ import britt.com.vrpokesmatchups.TypeRecycler.TypeImage
 import britt.com.vrpokesmatchups.TypeRecycler.TypesAdapter
 import britt.com.vrpokesmatchups.UsagesRecycler.MakePokemon
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.IOException
 
 var superEffectiveTypes = ArrayList<TypeImage>()
 var regularEffectTypes = ArrayList<TypeImage>()
@@ -42,8 +41,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setContentView(R.layout.activity_main)
         type_1.onItemSelectedListener = this
         type_2.onItemSelectedListener = this
+        onUsagesButtonClick()
 
         test.printResult(applicationContext)
+    }
+
+    fun onUsagesButtonClick() {
+        val intent = Intent(this@MainActivity, TypeUsageActivity().javaClass)
+        check_usages_button.setOnClickListener {
+            startActivity(intent)
+        }
     }
 
     fun updateTypesOnSpinnerChange() {
@@ -85,7 +92,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val rEtypesAdapter = TypesAdapter(regularEffectTypes)
         val nVEtypesAdapter = TypesAdapter(littleEffectTypes)
         val nEtypesAdapter = TypesAdapter(noEffectTypes)
-
 
         s_eff_recycler.adapter = sETypesAdapter
         s_eff_recycler.layoutManager = LinearLayoutManager(applicationContext)
