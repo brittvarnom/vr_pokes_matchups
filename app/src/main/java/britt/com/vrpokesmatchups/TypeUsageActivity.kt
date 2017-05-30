@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_type_usage.*
 class TypeUsageActivity : AppCompatActivity() {
 
 //    val typeUsageAdapter = UsageAdapter()
-//    val pokeList = MutableList<String>()
+//    val pokeList = MutableList<String>()git s
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
