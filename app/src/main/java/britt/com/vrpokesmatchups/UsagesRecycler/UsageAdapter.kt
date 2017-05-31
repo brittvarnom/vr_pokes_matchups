@@ -10,7 +10,7 @@ import britt.com.vrpokesmatchups.R
 import britt.com.vrpokesmatchups.UsagesRecycler.Pokes
 import com.squareup.picasso.Picasso
 
-class UsageAdapter(private val pokeList: List<Pokes>): RecyclerView.Adapter<UsageAdapter.UsageViewHolder>() {
+class UsageAdapter(private val pokeList: ArrayList<Pokes>): RecyclerView.Adapter<UsageAdapter.UsageViewHolder>() {
     override fun onBindViewHolder(holder: UsageViewHolder, position: Int) {
         val pokeImage = pokeList[position]
         holder.bind(pokeImage)

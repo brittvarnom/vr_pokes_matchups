@@ -42,8 +42,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         type_1.onItemSelectedListener = this
         type_2.onItemSelectedListener = this
         onUsagesButtonClick()
-
-        test.printResult(applicationContext)
     }
 
     fun onUsagesButtonClick() {
